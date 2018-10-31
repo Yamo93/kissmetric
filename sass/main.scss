@@ -1,0 +1,650 @@
+$color-primary-green: #33CB9A;
+$color-primary-blue: #3E54FF;
+$color-blue-dark: #3F476B;
+$color-white: #FEFEFE;
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $color-white;
+}
+
+/* -------------- FRONT SECTION ------------------ */
+
+.front-sec {
+    width: 100%;
+    height: 100vh;
+
+
+    .top-nav {
+        width: 100%;
+        height: 10vh;
+        padding-top: 1rem;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            overflow: hidden;
+        }
+
+        .top-logo {
+            font-size: 2rem;
+            margin-left: 5%;
+            margin-right: 20%;
+            margin-top: -.5rem;
+            color: $color-primary-blue;
+            text-transform: lowercase;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+        }
+
+        .top-menu {
+            list-style: none;
+            display: flex;
+            
+            &-item {
+                margin-right: 3rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                color: $color-blue-dark;
+
+                &:last-child {
+                    color: $color-primary-green;
+                    background-color: $color-white;
+                    padding: .7rem 1rem;
+                    border: .5px solid $color-primary-green;
+                    border-radius: 2px;
+                    margin-top: -.7rem;
+                }
+            }
+
+            .request {
+                margin-left: 1rem;
+                margin-right: 2rem;
+                padding: .7rem 2rem;
+                margin-top: -.7rem;
+                background-color: $color-primary-green;
+                color: $color-white;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .wrapping {
+        display: flex;
+        height: 100%;
+        
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding-bottom: 10rem;
+            margin-bottom: 15rem;
+        }
+    }
+
+    .info-box {
+        width: 45%;
+        height: 30vh;
+        margin-top: 13rem;
+        margin-left: 8%;
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__heading {
+            color: $color-primary-blue;
+            font-size: 3.5rem;
+            width: 60%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        &__para {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+        }
+
+        &__btn:link,
+        &__btn:visited {
+            display: inline-block;
+            text-decoration: none;
+            color: $color-white;
+            background-color: $color-primary-green;
+            border: .5px solid transparent;
+            padding: .7rem 2rem;
+            border-radius: 2px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            transition: all .5s;
+        }
+
+        &__btn:hover,
+        &__btn:active {
+            color: $color-primary-green;
+            background-color: $color-white;
+            border: .5px solid currentColor;
+            transform: translateY(-2px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, .5);
+        }
+
+        &__btn:active {
+            transform: translateY(0px);
+            box-shadow: 0 0 0;
+        }
+
+    }
+
+    .blue-box {
+        width: 40%;
+        margin-top: 14rem;
+        margin-left: 2rem;
+        margin-bottom: 18rem;
+        //height: 40vh;
+        background-color: $color-primary-blue;
+        color: $color-white;
+        padding: 3.5rem 3rem 5.5rem 3rem;
+        margin-right: 3rem;
+        border-radius: 3px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .6);
+
+        @media screen and (max-width: 520px) {
+            margin-top: 20rem;
+            height: 1000px;
+            clear: both;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__para {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+/* ----------- MARKETING ---------------- */
+
+.marketing {
+    
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+    background-color: #EBF5FF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 15rem;
+        height: 1000px;
+        clear: both;
+    }
+
+    @media screen and (max-width: 520px) {
+        margin-top: 20rem;
+        height: 1000px;
+        clear: both;
+    }
+
+    @media screen and (max-width: 406px) {
+        margin-top: 25rem;
+        height: 1000px;
+        clear: both;
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 2.5rem;
+        width: 70%;
+        margin: 0 auto 3rem auto;
+    }
+
+    &__boxes {
+        width: 100%;
+        margin: 3rem auto;
+        height: 50vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            height: 100rem;
+        }
+
+        &-box {
+            width: 30%;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media screen and (max-width: 768px) {
+                width: 80%;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .box-icon {
+                width: 10rem;
+                height: 10rem;
+                margin-bottom: 2rem;
+                fill: $color-primary-blue;
+
+                @media screen and (max-width: 768px) {
+                    height: 30rem;
+                    width: 30rem;
+                }
+            }
+
+            &--head {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            &--para {
+                text-align: center;
+                line-height: 1.8;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__btn:link,
+    &__btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-primary-green;
+        border: .5px solid transparent;
+        padding: .7rem 2rem;
+        border-radius: 2px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        transition: all .5s;
+    }
+
+    &__btn:hover,
+    &__btn:active {
+        color: $color-primary-green;
+        background-color: $color-white;
+        border: .5px solid currentColor;
+        transform: translateY(-2px);
+        box-shadow: 0 1.5px 3px rgba(0, 0, 0, .5);
+    }
+
+    &__btn:active {
+        transform: translateY(0px);
+        box-shadow: 0 0 0;
+    }
+}
+
+/* ---------- TESTIMONY SECTION ----------- */
+
+.testimony {
+    width: 100%;
+    height: 70vh;
+    padding: 5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    blockquote {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        width: 50%;
+        text-align: center;
+    }
+    
+}
+
+/* ---------- COMPANIES SECTION ----------- */
+
+.companies {
+    width: 100%;
+    height: 50vh;
+    padding: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    @media screen and (max-width: 700px) {
+        height: 100%;
+    }
+
+    &__heading {
+    text-align: center;
+    font-size: 2.5rem;
+    width: 70%;
+    margin: 0 auto 7rem auto;
+
+    @media screen and (max-width: 700px) {
+        margin-bottom: 3rem;
+    }
+    }
+
+    &__img {
+        width: 17rem;
+        height: 5rem;
+        margin-right: 2rem;
+
+        @media screen and (max-width: 700px) {
+            height: 8rem;
+        }
+    }
+
+    .logo-row-one {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    .logo-row-two {
+        display: flex;
+        padding-bottom: 1rem;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+}
+
+/* --------- BLUE CORNER --------- */
+
+.blue-corner {
+    width: 100%;
+    height: 40vh;
+    background-color: $color-primary-blue;
+    color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+        font-size: 2.5rem;
+        margin-top: -5rem;
+        margin-bottom: 4rem;
+    }
+
+    &__btn:link,
+    &__btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-primary-green;
+        border: .5px solid transparent;
+        padding: .7rem 2rem;
+        border-radius: 2px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        transition: all .5s;
+    }
+
+    &__btn:hover,
+    &__btn:active {
+        color: $color-primary-green;
+        background-color: $color-white;
+        border: .5px solid currentColor;
+        transform: translateY(-2px);
+        box-shadow: 0 1.5px 3px rgba(0, 0, 0, .5);
+    }
+
+    &__btn:active {
+        transform: translateY(0px);
+        box-shadow: 0 0 0;
+    }
+}
+
+/* ------------ FOOTER ----------- */
+
+.footer {
+    width: 100%;
+    height: 60vh;
+    padding: 5rem 5rem 0 5rem;
+    color: $color-blue-dark;
+    overflow: hidden;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 650px) {
+        height: 100%;
+    }
+
+    .wrapper {
+        display: flex;
+
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    .footer-left {
+        width: 55%;
+
+        @media screen and (max-width: 650px) {
+            width: 100%;
+        }
+
+        .top-logo {
+            font-size: 2rem;
+            margin-left: 5%;
+            margin-right: 20%;
+            margin-top: -.5rem;
+            color: $color-primary-blue;
+            text-transform: lowercase;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+
+            @media screen and (max-width: 650px) {
+                //text-align: center;
+                width: 15rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .footer-right {
+        
+        display: flex;
+
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
+            height: 50rem;
+        }
+
+        &__info {
+            width: 50%;
+
+            @media screen and (max-width: 650px) {
+                width: 90%;
+                display: block;
+                margin: 3rem auto;
+            }
+
+            &--list {
+                list-style: none;
+
+                &-item {
+                    margin-bottom: 1.5rem;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 650px) {
+                        display: block;
+                        width: 10rem;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            margin-left: 35%;
+            width: 80%;
+            height: 80rem;
+
+            @media screen and (max-width: 650px) {
+                height: 20rem;
+            }
+
+            &--head {
+                margin-bottom: 2rem;
+                width: 70%;
+            }
+
+            label {
+                display: block;
+            }
+
+            input[type="text"] {
+                margin-bottom: .5rem;
+            }
+
+            input[type="email"] {
+                margin-bottom: 2rem;
+            }
+
+            .submit {
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-decoration: none;
+                color: $color-white;
+                background-color: $color-primary-green;
+                border: .5px solid transparent;
+                padding: .7rem 2rem;
+                border-radius: 2px;
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                transition: all .5s;
+
+                &:hover {
+                    color: $color-primary-green;
+                    background-color: $color-white;
+                    border: .5px solid currentColor;
+                    transform: translateY(-2px);
+                    box-shadow: 0 1.5px 3px rgba(0, 0, 0, .5); 
+                }
+            }
+        }
+    }
+
+    .bottom-nav {
+        display: flex;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        color: $color-blue-dark;
+
+
+
+        &__menu {
+            list-style: none;
+            display: flex;
+
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+            }
+
+            &--item {
+                margin-right: 2rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            
+        }
+
+        &__socials {
+            position: absolute;
+            right: 10rem;
+            bottom: -.5rem;
+
+            &-link {
+                text-decoration: none;
+            }  
+            .box-icon {
+                fill: $color-primary-blue;
+                width: 3rem;
+                height: 3rem;
+                transition: all .5s;
+
+                &:hover {
+                    fill: $color-primary-green;
+                }
+
+                
+                &:first-child {
+                    margin-right: 1rem;
+                }
+            }
+
+           
+
+        }
+    }
+}
